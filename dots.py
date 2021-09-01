@@ -4,7 +4,12 @@ import sys
 import time
 from pygame.locals import *
 import time as t
+import webbrowser
+  
+
+
 pygame.init()
+
 
 game_clock = pygame.time.Clock()
 static_players = [ ]
@@ -15,6 +20,8 @@ p2win = False
 
 green1x = random.randrange(0, 600)
 green1y = random.randrange(0, 600)
+
+
 
 green2y = random.randrange(0, 600)
 green2x = random.randrange(0, 600)
@@ -28,6 +35,7 @@ green4y = random.randrange(0, 600)
 green5x = random.randrange(0, 600)
 green5y = random.randrange(0, 600)
 
+WINSIZE = 80
 
 cir2x = random.randrange(0, 600)
 cir2y = random.randrange(0, 600)
@@ -71,6 +79,37 @@ green2 = pygame.draw.circle(main_window, GREEN, (green2x, green2y), 20, 0)
 green3 = pygame.draw.circle(main_window, GREEN, (green3x, green3y), 20, 0)
 green4 = pygame.draw.circle(main_window, GREEN, (green4x, green4y), 20, 0)
 green5 = pygame.draw.circle(main_window, GREEN, (green5x, green5y), 20, 0)
+txtfont = pygame.font.SysFont(None, 48)
+
+def instructions():
+    pass
+  
+    # open html file
+    #webbrowser.open('index.html') 
+
+
+def drawText(text, font, x, y, color):
+    textobj = font.render(text, 1, color)
+    textrect = textobj.get_rect()
+    textrect.topleft = (x, y)
+    main_window.blit(textobj, textrect)    
+
+def pause():
+    while True:
+
+        
+        
+        for events in pygame.event.get():
+            if events.type == QUIT:
+                pygame.quit()
+                sys.exit()
+            if events.type == KEYDOWN:
+                if events.key == K_i:
+                    instructions()
+                else:
+                    return    
+
+
 
 
 
@@ -82,6 +121,11 @@ for number in range(0, circle_num):
     circleyposition = random.randrange(0, 600)
     circle_pos.append(circlexposition)
     circle_pos.append(circleyposition)
+main_window.fill(WHITE)
+drawText("press a key to Start", txtfont, 200, 200, BLACK )
+drawText("Press i for instructions", txtfont, 300, 300, BLACK)
+pygame.display.update()
+pause()
 
 
 while True:
@@ -115,7 +159,14 @@ while True:
             if event.key == K_DOWN:
                 MOVEUP = False
                 MOVEDOWN = True
-            
+            if event.key == K_i:
+                drawText("press a key to resume", txtfont, 200, 200, BLACK )
+                pygame.display.update()
+                instructions()
+                pause()
+
+
+
             if event.key == K_a:
                 MOVELEFT2 = True
                 MOVERIGHT2 = False
@@ -231,11 +282,11 @@ while True:
 
     green5 = pygame.draw.circle(main_window, GREEN, (green5x, green5y), 20, 0)
     
-    if circleSize > 80:
+    if circleSize > WINSIZE:
         p1win = True
         break
 
-    if circle2Size > 80:
+    if circle2Size > WINSIZE:
         p2win = True
         break
 
@@ -255,11 +306,15 @@ while True:
            
 if p1win:
     main_window.fill(BLACK)
+    drawText("black wins!", txtfont, 200, 200, RED)
+
 if p2win:
-    main_window.fill(RED)    
+    main_window.fill(RED)   
+    drawText("red wins", txtfont, 200, 200, BLACK)
+ 
     
 pygame.display.update()
-t.sleep(1)
+pause()
 pygame.quit()
 sys.exit()
 

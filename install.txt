@@ -26,4 +26,4 @@ python3 -m pygame.examples.aliens
   try runing dots.py
   
 
-
+if you have any problems, email support at kellanbutler52@gmail.com for assistance or a step by steb guide.

@@ -1,4 +1,4 @@
-1. press windows + r
+press windows + r
 typ cmd and press enter
 type python3 and choose a version (version 3.4 or greater)
 type:

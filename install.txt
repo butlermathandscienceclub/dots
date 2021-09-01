@@ -2,7 +2,8 @@ windows:
   press windows + r
   typ cmd and press enter
   type python3 and choose a version (version 3.4 or greater)
-  type:
+  (to run a command, copy and paste the command in and press enter)
+  run:
 pip install pygame
 
   try runing dots.py
@@ -10,6 +11,16 @@ pip install pygame
   if it doesent work, press windows + r
   typ cmd and press enter
 
-  type:
+  run:
 pip3 install pygame
+
+
+Linux debian or ubuntu:
+  open a terminal window
+  run the following commands:
+sudo apt-get update
+sudo apt-get install python3.6
+  try runing dots.py
+  
+
 

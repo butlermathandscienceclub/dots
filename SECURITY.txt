@@ -1,0 +1,4 @@
+REPORTING SECURITY VULNRIBILITIES:
+All versions are supported.
+Email us at kellanbutler52@gmail.com to report a vulnerbility.
+be sure to include a detailed description, along with your email and the version number

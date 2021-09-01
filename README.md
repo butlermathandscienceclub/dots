@@ -1,2 +1,3 @@
-# dots
-Still uder development
+# Circles and dots in a box!
+install instructions in install.txt
+

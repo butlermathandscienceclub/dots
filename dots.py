@@ -81,11 +81,7 @@ green4 = pygame.draw.circle(main_window, GREEN, (green4x, green4y), 20, 0)
 green5 = pygame.draw.circle(main_window, GREEN, (green5x, green5y), 20, 0)
 txtfont = pygame.font.SysFont(None, 48)
 
-def instructions():
-    pass
-  
-    # open html file
-    #webbrowser.open('index.html') 
+
 
 
 def drawText(text, font, x, y, color):
@@ -109,11 +105,15 @@ def pause():
                 else:
                     return    
 
-
-
-
-
-
+def instructions():
+    
+  
+    # open html file
+    webbrowser.open('index.html') 
+    main_window.fill(WHITE)
+    drawText("press a key to resume", txtfont, 200, 200, BLACK )
+    pygame.display.update()
+    pause()
 
 
 for number in range(0, circle_num):
@@ -161,9 +161,8 @@ while True:
                 MOVEDOWN = True
             if event.key == K_i:
                 drawText("press a key to resume", txtfont, 200, 200, BLACK )
-                pygame.display.update()
                 instructions()
-                pause()
+                
 
 
 

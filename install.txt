@@ -6,7 +6,7 @@ windows:
   run:
 pip install pygame
 
-  try runing dots.py
+  try runing the game by double clicking on dots.py
 
   if it doesent work, press windows + r
   typ cmd and press enter
@@ -23,7 +23,8 @@ sudo apt-get install python3.6
 sudo apt-get install python3-pygame
 python3 -m pygame.examples.aliens
 
-  try runing dots.py
+  try runing dots.py by running the command:
+python3 dots.py
   
 
 if you have any problems, email support at kellanbutler52@gmail.com for assistance or a step by steb guide.

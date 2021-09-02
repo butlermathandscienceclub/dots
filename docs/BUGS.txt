@@ -1,0 +1,1 @@
+If you find a bug, email us at kellanbutler52@gmail.com. Please include your email and a detailed description of the bug.

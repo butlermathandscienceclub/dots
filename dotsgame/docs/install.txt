@@ -21,7 +21,6 @@ Linux debian or ubuntu:
 sudo apt-get update
 sudo apt-get install python3.6
 sudo apt-get install python3-pygame
-python3 -m pygame.examples.aliens
 
   try runing dots.py by running the command:
 python3 dots.py

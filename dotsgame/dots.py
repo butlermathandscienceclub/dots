@@ -79,7 +79,7 @@ green2 = pygame.draw.circle(main_window, GREEN, (green2x, green2y), 20, 0)
 green3 = pygame.draw.circle(main_window, GREEN, (green3x, green3y), 20, 0)
 green4 = pygame.draw.circle(main_window, GREEN, (green4x, green4y), 20, 0)
 green5 = pygame.draw.circle(main_window, GREEN, (green5x, green5y), 20, 0)
-txtfont = pygame.font.SysFont(None, 48)
+txtfont = pygame.font.SysFont("Arial", 48)
 
 
 

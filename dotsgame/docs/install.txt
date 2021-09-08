@@ -22,8 +22,13 @@ sudo apt-get update
 sudo apt-get install python3.6
 sudo apt-get install python3-pygame
 
-  try runing dots.py by running the command:
+try runing dots.py by running the command:
 python3 dots.py
+  
+Debian:
+  navigate to the dist directory(through dotsgame) and run the game with:
+./dots
+
   
 If the window displays lots of white words, that is good. If the screen says: "do you want to continue[Y/n]" or somthing similar, type an uppercase y and press enter.
 if you have any problems, email support at kellanbutler52@gmail.com for assistance or a step by steb guide.

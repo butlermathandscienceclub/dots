@@ -26,7 +26,7 @@ try runing dots.py by running the command:
 python3 dots.py
   
 Debian:
-  navigate to the dist directory(through dotsgame) and run the game with:
+  navigate to the dist directory(dist.zip) and run the game with:
 ./dots
 
   

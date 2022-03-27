@@ -63,7 +63,8 @@ RED = (255, 0, 0)
 BLACK = (0, 0, 0)
 PURPLE = (208, 16, 222)
 YELLOW = (227, 224, 25)
-GREEN = (32, 212, 50)                                 
+GREEN = (32, 212, 50)       
+BLUE = (0, 68, 255)                          
 player = pygame.draw.circle(main_window, BLACK, (playerx, playery), 20, 0)
 player2 = pygame.draw.circle(main_window, BLACK, (player2x, player2y), 20, 0)
 extra_cicle = pygame.draw.circle(main_window, YELLOW, (circlex, circley), 40, 5)
@@ -81,7 +82,7 @@ green4 = pygame.draw.circle(main_window, GREEN, (green4x, green4y), 20, 0)
 green5 = pygame.draw.circle(main_window, GREEN, (green5x, green5y), 20, 0)
 txtfont = pygame.font.SysFont("Arial", 48)
 
-
+CIRCLE_COLOR_ = (random.randrange(5,250), random.randrange(5,251), random.randrange(6,251))
 
 
 def drawText(text, font, x, y, color):
@@ -294,7 +295,7 @@ while True:
         if circl % 2 != 0:
             continue
         else:
-                pygame.draw.circle(main_window, YELLOW, (circle_pos[circl], circle_pos[circl+1]), random.randrange(20, 51), 5)        
+                pygame.draw.circle(main_window, CIRCLE_COLOR_, (circle_pos[circl], circle_pos[circl+1]), random.randrange(20, 51), 5)        
     if circleSize <= 10:
         circleSize += 5
     if circle2Size <= 10:
